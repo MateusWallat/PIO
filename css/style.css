@@ -8,43 +8,45 @@ html,body{
     height: 100%;
     
 }
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+/* ----------------------------------------------------------------- */
+
 header{
     padding: 20px;
     background-color: #051933;
-    height: 180px;
-    
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
-
 
 header h1{
     color: white;
-    display: inline-block;
     font-family: 'Gemunu Libre', sans-serif;
-}
-
-nav{
-   float: right; 
-   margin-right: 20px;
 }
 
 header nav a{
     color: aliceblue;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
-    margin: 15px;
-
+    margin: 0 15px;
 }
+
 /*--------------------------------------HEADER------------------------------------------*/
- .about{
+.banner{
     background-image: url(../imagens/tech01.jpg);
     height: 700px;
     background-size: cover;
     background-attachment: fixed;
-
 }
 
-.about > h2{
+.banner > h2{
     color: white;
     font-family: 'Gemunu Libre', sans-serif;
     font-size: 30px;
@@ -53,12 +55,12 @@ header nav a{
     padding-bottom: 20px;
 }
 
-.about p{
+.banner p{
     width: 40%;
     color: aliceblue;
     font-family: 'Inter', sans-serif;
     text-align: justify;
-    margin-left: 30px;
+    padding: 0 30px;
     font-size: 1.2em;
 }
 /*----------------------------------ABOUT-------------------------------------------*/
@@ -67,30 +69,23 @@ header nav a{
     
 }
 
-.logica > h2{
-    margin-top: 50px;
-    margin-left: 50px;
-   color: #093366;
-   font-size: 50px;
-   font-family: 'Gemunu Libre', sans-serif;
+.logica  h2{
+    margin: 25px 0;
+    text-align: center;
+    color: #093366;
+    font-size: 50px;
+    font-family: 'Gemunu Libre', sans-serif;
 }
 
-.test{
+.img{
     background-image: url(https://www.alura.com.br/artigos/assets/algoritmos-e-logica-de-programacao/algoritmos-logica-programacao.jpeg);
     background-size: cover;
-    width: 85%;
+    width: 100%;
     height: 300px;
-    margin-left: 50px;
-    margin-top: 20px;
-    
 }
 
 .texto{
-    max-width: 1280px;
-    padding: 50px;
-    margin: 0 auto;
     font-family: 'Inter', sans-serif;
-    
 }
 
 .texto p{
@@ -107,7 +102,7 @@ header nav a{
     list-style: inside;
     font-size: 1.2em;
     text-align: justify;
-    margin-left: 30px;
+    padding: 0 30px;
     
 }
 
@@ -116,12 +111,17 @@ header nav a{
 .video-center{
     padding-top: 100px;
 }
+
+.video-center:last-of-type {
+    padding-bottom: 100px;
+}
+
 .videos h2{
     color: #093366;
     font-size: 50px;
     margin-top: 50px;
-    margin-left: 50px;
     font-family: 'Gemunu Libre', sans-serif;
+    text-align: center;
 }
 
 .video h3{
@@ -132,71 +132,76 @@ header nav a{
 
 .video{
     margin-top: 100px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
-
-
 .video p{
     padding: 20px;
-    width: 80%;
     font-family: 'Inter', sans-serif;
     font-size: 1.2em;
 }
+
+.video .frame-wraper {
+    display: flex;
+    justify-content: center;
+}
+
 .video iframe{
     padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
 }
+
 /*--------------------------------Sobre Nos-----------------------------------*/
 .cor{
     background-color: #051933;
 }
 
 .sobreNos{
- max-width:1280px ;
- margin: 0 auto;
- font-size: 1.2em;
- 
+    max-width:1280px ;
+    margin: 0 auto;
+    font-size: 1.2em;
 }
+
 .sobreNos h2{
     font-family: 'Gemunu Libre', sans-serif;
     font-size: 2em;
     padding: 50px;
     color: white;
-
 }
 
 .sobreNos p{
     padding-bottom: 50px;
     font-family: 'Inter', sans-serif;
-    text-align: justify;
     color: white;
+    padding: 0 20px;
 }
 .alunoImg{
-   display: flex;
-   justify-content: space-around;
-   padding: 30px 0;
-   
-    
-   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px 0;
 }
 
 
-.mateus{
+.aluno-wraper{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
     color: white;
+    width: 33.3%;
+    margin: 15px 0;
 }
+
 .imagem{
     background-image: url(../imagens/avatar\ propq\ masc.png);
     background-size: cover;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    
 }
 
 /*------------------------------Sobre Nos---------------------------------------*/
@@ -228,13 +233,23 @@ footer{
 /*? Screen >= 768px < 992px Medium TABLET -------------------------------------------------------------------------------------------------------------- */
 
 @media screen and (max-width:992px) {
+    .banner > h2{
+        margin-left: 0;
+        text-align: center;
+    }
     
+    .banner p{
+        width: 100%;
+    }
 }
 
 /*? Screen >= 576px < 768px Small Phone ---------------------------------------------------------------------------------------------------------------- */
 
 @media screen and (max-width:768px) {
     
+    .aluno-wraper {
+        width: 50%;
+    }
 
 }
 
@@ -242,6 +257,32 @@ footer{
 
 @media screen and (max-width:576px) {
 
+    .aluno-wraper {
+        width: 100%;
+    }
+
+    .banner > h2{
+        padding-top: 30px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    header h1 {
+        text-align: center;
+        width: 100%;
+    }
+    
+    header nav {
+        width: 70%;
+        margin: 20px auto 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    header nav a {
+        margin: 0;
+    }
 
 }
 
