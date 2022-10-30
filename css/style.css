@@ -221,6 +221,15 @@ footer{
     padding-top: 100px;
  }
 
+ footer a{
+    color: white;
+    margin: 10px;
+ }
+
+ footer i{
+    margin-right: 5px;
+ }
+
 
  /*? Screen >= 992px < 1200px Large DESKTOP ------------------------------------------------------------------------------------------------------------- */
 
